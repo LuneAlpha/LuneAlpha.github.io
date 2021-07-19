@@ -14353,11 +14353,12 @@ strong {
 }
 
 .tile-box {
-	margin: 5px;
+	margin: 10px;
 	background-color: transparent;
 	width: 350px;
 	height: 350px;
 	position: relative;
+	box-shadow: 0 0 10px 2px #1e5cac;
 }
 
 .tile-box:hover {
@@ -14375,7 +14376,8 @@ strong {
 }
 
 .tile-title-primary, .tile-info-primary{
-	color: #fff;
+	/* color: #fff; */
+	color: #1d242a;
 }
 
 .tile-title-secondary, .tile-info-secondary{
@@ -14383,7 +14385,8 @@ strong {
 }
 
 .tile-image-primary{
-	background-color: #232c33;
+	/* background-color: #232c33; */
+	background-color: #f4f7f5;
 }
 
 .tile-image-secondary{
