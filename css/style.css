@@ -14509,8 +14509,8 @@ strong {
 	}
 
 	.tile-image {
-		width: 250px;
-		height: 250px;
+		width: 240px;
+		height: 240px;
 		margin: 2px;
 		z-index: 20;
 		background-color: #232c33;
