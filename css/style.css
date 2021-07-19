@@ -10497,9 +10497,7 @@ strong {
 	}
 }
 .content_6 {
-	background: url("../i/three-male-swimmers-racing-against-each-other.jpg")
-		no-repeat 50% 65%;
-	background-size: cover;
+	background-image: linear-gradient(to right, #0aa0f5, #1e5cac, #0aa0f5);
 }
 @media (max-width: 991.98px) {
 	.content_6 .text-adaptive {
@@ -14369,9 +14367,27 @@ strong {
 .tile-image {
 	width: 350px;
 	height: 350px;
-	margin: 2px;
 	z-index: 20;
+}
+
+.tile-box, .tile-image, .news-tile-image{
+	border-radius: 10px;
+}
+
+.tile-title-primary, .tile-info-primary{
+	color: #fff;
+}
+
+.tile-title-secondary, .tile-info-secondary{
+	color: #1d242a;
+}
+
+.tile-image-primary{
 	background-color: #232c33;
+}
+
+.tile-image-secondary{
+	background-color: #0aa0f5;
 }
 
 .tile-icon {
@@ -14384,9 +14400,15 @@ strong {
 	z-index: 21;
 }
 
+#location-icon{
+	width: 80px;
+	height: 80px;
+}
+
 .tile-icon-title {
 	position: absolute;
-	font-size: 1.5em;
+	font-size: 1.65em;
+	font-weight: 500;
 	top: 65%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -14419,6 +14441,7 @@ strong {
 	width: 300px;
 	transform: translate(-50%, -50%);
 	z-index: 21;
+	font-weight: 600;
 }
 
 .news-row {
@@ -14480,6 +14503,8 @@ strong {
 	.tile-box {
 		font-size: 0.9em;
 		margin: 3px;
+		width: 250px;
+		height: 250px;
 	}
 
 	.news-tile-title {
@@ -14492,53 +14517,18 @@ strong {
 	}
 
 	.tile-info {
-		margin: auto;
-		position: absolute;
-		top: 50%;
-		left: 50%;
 		width: 220px;
-		transform: translate(-50%, -50%);
-		z-index: 21;
-	}
-
-	.tile-box {
-		background-color: transparent;
-		width: 250px;
-		height: 250px;
-		position: relative;
 	}
 
 	.tile-image {
 		width: 250px;
 		height: 250px;
-		margin: 2px;
-		z-index: 20;
-		background-color: #232c33;
-	}
-	.tile-icon {
-		width: 70px;
-		height: 70px;
-		position: absolute;
-		top: 35%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 21;
-	}
-
-	.tile-icon-title {
-		position: absolute;
-		font-size: 1.5em;
-		top: 65%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 21;
 	}
 }
 
 @media screen and (max-width: 992px) {
 	.content_6 {
-		background: url("../i/bball_vertical.jpg") no-repeat 50% 80%;
-		background-size: cover;
+		background-image: linear-gradient(to bottom, #0aa0f5, #1e5cac, #0aa0f5);
 	}
 
 	.photo-face{

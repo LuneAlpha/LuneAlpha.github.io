@@ -30,9 +30,10 @@ $('#contact-btn').on('click', () => {
 	let element = $("#chat-tile")[0];
 	element.scrollIntoView({behavior:'smooth'});
 	if(!isContactOpen){
+		let timeout = ($(window).width < 576) ? 1200 : 900;
 		setTimeout(() => {
 			$('#chat-tile').click();
-		}, 900);
+		}, timeout);
 	}
 })
 
