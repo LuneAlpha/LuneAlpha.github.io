@@ -10497,7 +10497,7 @@ strong {
 	}
 }
 .content_6 {
-	background-image: linear-gradient(to right, #0aa0f5, #1e5cac, #0aa0f5);
+	background-image: linear-gradient(to right, rgba(10, 160, 245, 0.5), rgba(30, 92, 172,0.9), rgba(10, 160, 245, 0.5));
 }
 @media (max-width: 991.98px) {
 	.content_6 .text-adaptive {
@@ -14528,7 +14528,7 @@ strong {
 
 @media screen and (max-width: 992px) {
 	.content_6 {
-		background-image: linear-gradient(to bottom, #0aa0f5, #1e5cac, #0aa0f5);
+		background-image: linear-gradient(to bottom, rgba(10, 160, 245, 0.5), rgba(30, 92, 172,0.9), rgba(10, 160, 245, 0.5));
 	}
 
 	.photo-face{
