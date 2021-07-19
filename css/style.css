@@ -10497,7 +10497,7 @@ strong {
 	}
 }
 .content_6 {
-	background-image: linear-gradient(to right, rgba(10, 160, 245, 0.5), rgba(30, 92, 172,0.9), rgba(10, 160, 245, 0.5));
+	background-image: linear-gradient(to right, rgba(10, 160, 245, 0.5), rgba(79, 133, 202, 0.9), rgba(10, 160, 245, 0.5));
 }
 @media (max-width: 991.98px) {
 	.content_6 .text-adaptive {
@@ -14297,7 +14297,12 @@ strong {
 	background-blend-mode: soft-light;
 }
 
+.interested{
+	z-index: 20;
+}
+
 .photo-face-wrapper {
+	z-index: 0;
 	padding: 0;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
@@ -14358,6 +14363,9 @@ strong {
 	width: 350px;
 	height: 350px;
 	position: relative;
+}
+
+.tile-box-shadow{
 	box-shadow: 0 0 10px 2px #1e5cac;
 }
 
@@ -14472,6 +14480,7 @@ strong {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 21;
+	font-weight: 500;
 }
 
 .news-tile-image {
@@ -14502,7 +14511,21 @@ strong {
 #contact-btn {
 	z-index: 20;
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 598px) {
+	.content_6 {
+		background-image: linear-gradient(to bottom, rgba(10, 160, 245, 0.5), rgba(79, 133, 202, 0.9), rgba(10, 160, 245, 0.5));
+	}
+
+	.photo-face{
+		width: 135px;
+		height: 135px;
+	}
+
+	.tile-gallery{
+		flex-direction: column;
+	}
+
 	.tile-box {
 		font-size: 0.9em;
 		margin: 3px;
@@ -14511,31 +14534,223 @@ strong {
 	}
 
 	.news-tile-title {
-		position: absolute;
-		top: 35%;
-		left: 50%;
 		width: 220px;
-		transform: translate(-50%, -50%);
-		z-index: 21;
+		font-size: 1.5em;
 	}
 
 	.tile-info {
 		width: 220px;
+		line-height: 1.45em;
 	}
 
 	.tile-image {
 		width: 250px;
 		height: 250px;
 	}
+
+	#location-icon{
+		width: 85px;
+		height: 85px;
+	}
+
+	.tile-box-shadow{
+		box-shadow: 0 0 5px 1px rgba(30, 92, 172,1);
+	}
+
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 600px) {
+
 	.content_6 {
-		background-image: linear-gradient(to bottom, rgba(10, 160, 245, 0.5), rgba(30, 92, 172,0.9), rgba(10, 160, 245, 0.5));
+		background-image: linear-gradient(to bottom, rgba(10, 160, 245, 0.5), rgba(79, 133, 202, 0.9), rgba(10, 160, 245, 0.5));
 	}
 
 	.photo-face{
 		width: 150px;
 		height: 150px;
 	}
+
+	.tile-gallery{
+		flex-direction: column;
+	}
+
+	.tile-icon {
+		width: 80px;
+		height: 80px;
+	}
+
+	.tile-box {
+		font-size: 1.1em;
+		margin: 3px;
+		width: 325px;
+		height: 325px;
+	}
+
+	.news-tile-title {
+		width: 275px;
+		font-size: 1.45em;
+	}
+
+	.tile-info {
+		width: 275px;
+		font-size: 0.95em;
+		line-height: 1.5em;
+	}
+
+	.tile-image {
+		width: 325px;
+		height: 325px;
+	}
+
+	#location-icon{
+		width: 105px;
+		height: 105px;
+	}
+
 }
+
+@media screen and (min-width: 768px) {
+	.content_6 {
+		background-image: linear-gradient(to right, rgba(10, 160, 245, 0.5), rgba(79, 133, 202, 0.9), rgba(10, 160, 245, 0.5));
+	}
+
+	.logo_mobile {
+		height: 100px;
+	}
+
+	.logo_mobile .logo-nav{
+		position:absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.logo_mobile + h1 {
+		text-align: center;
+	}
+
+	.photo-face{
+		width: 140px;
+		height: 140px;
+	}
+
+	.tile-gallery{
+		flex-direction: row;
+	}
+
+	.tile-icon {
+		width: 70px;
+		height: 70px;
+	}
+
+	.tile-box {
+		font-size: 0.95em;
+		margin: 4px;
+		width: 230px;
+		height: 230px;
+	}
+
+	.news-tile-title {
+		width: 200px;
+		font-size: 1.25em;
+	}
+
+	.tile-info {
+		width: 200px;
+		font-size: 0.95em;
+		line-height: 1.5em;
+	}
+
+	.tile-image {
+		width: 230px;
+		height: 230px;
+	}
+
+	#location-icon{
+		width: 90px;
+		height: 90px;
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+
+	.photo-face{
+		width: 150px;
+		height: 150px;
+	}
+
+	.tile-box {
+		font-size: 1em;
+		margin: 5px;
+		width: 250px;
+		height: 250px;
+	}
+
+	.news-tile-title {
+		width: 220px;
+		font-size: 1.3em;
+	}
+
+	.news-tile-btn{
+		font-size: 1.15em;
+		font-weight: 500;
+	}
+
+	.tile-info {
+		width: 220px;
+		font-size: 0.95em;
+		line-height: 1.5em;
+	}
+
+	.tile-image {
+		width: 250px;
+		height: 250px;
+	}
+
+	.tile-box-shadow{
+		box-shadow: 0 0 10px 2px rgba(30, 92, 172,1);
+	}
+}
+
+/* weird number for consistency sake, search above */
+@media screen and (min-width: 1199.98px) {
+
+	.photo-face{
+		width: 175px;
+		height: 175px;
+	}
+
+	.tile-box {
+		font-size: 1.1em;
+		margin: 10px;
+		width: 325px;
+		height: 325px;
+	}
+
+	.news-tile-title {
+		width: 240px;
+		font-size: 1.65em;
+	}
+
+	.tile-info {
+		width: 240px;
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+
+	.tile-image {
+		width: 325px;
+		height: 325px;
+	}
+
+	.tile-icon {
+		width: 90px;
+		height: 90px;
+	}
+
+	#location-icon{
+		width: 105px;
+		height: 105px;
+	}
+}
+
