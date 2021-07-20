@@ -14373,13 +14373,13 @@ strong {
 	cursor: pointer;
 }
 
-.tile-image {
+.tile-image, #mapid {
 	width: 350px;
 	height: 350px;
 	z-index: 20;
 }
 
-.tile-box, .tile-image, .news-tile-image{
+.tile-box, .tile-image, .news-tile-image, #mapid{
 	border-radius: 10px;
 }
 
@@ -14414,6 +14414,23 @@ strong {
 #location-icon{
 	width: 80px;
 	height: 80px;
+}
+
+.map-icon-flipper {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	height: 50px;
+	width: 50px;
+	z-index: 21;
+}
+
+.map-icon-flipper:hover{
+	cursor: pointer;
+}
+
+#location-tile:hover{
+	cursor: default;
 }
 
 .tile-icon-title {
@@ -14543,7 +14560,7 @@ strong {
 		line-height: 1.45em;
 	}
 
-	.tile-image {
+	.tile-image, #mapid {
 		width: 250px;
 		height: 250px;
 	}
@@ -14597,7 +14614,7 @@ strong {
 		line-height: 1.5em;
 	}
 
-	.tile-image {
+	.tile-image, #mapid {
 		width: 325px;
 		height: 325px;
 	}
@@ -14660,7 +14677,7 @@ strong {
 		line-height: 1.5em;
 	}
 
-	.tile-image {
+	.tile-image, #mapid {
 		width: 230px;
 		height: 230px;
 	}
@@ -14702,7 +14719,7 @@ strong {
 		line-height: 1.5em;
 	}
 
-	.tile-image {
+	.tile-image, #mapid {
 		width: 250px;
 		height: 250px;
 	}
@@ -14738,7 +14755,7 @@ strong {
 		line-height: 1.5em;
 	}
 
-	.tile-image {
+	.tile-image, #mapid {
 		width: 325px;
 		height: 325px;
 	}

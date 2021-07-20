@@ -14,12 +14,6 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous" />
-		<!-- Slick 1.8.1 jQuery plugin CSS (Sliders) -->
-		<link rel="stylesheet" type="text/css"
-			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-		<!-- Fancybox 3 jQuery plugin CSS (Open images and video in popup) -->
-		<link rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 		<!-- AOS 2.3.1 jQuery plugin CSS (Animations) -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<!-- FontAwesome CSS -->
@@ -30,6 +24,10 @@
 		<link href="css/style.css" rel="stylesheet" />
 		<!-- jQuery 3.3.1 -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<!-- LeafletJS map extension-->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin="" />
 	</head>
 
 	<body>
@@ -212,12 +210,13 @@
 		<!-- Content 6 -->
 
 		<!-- za boju pozadine trazi content_6 u style.css -->
-		<section  id="tile-section" class="content_6">
+		<section id="tile-section" class="content_6">
 			<div class="row tile-gallery-row text-center color-white">
 				<div class="tile-gallery mt-30">
-					<div class="tile-box tile-box-shadow" data-aos-duration="400" data-aos="fade-down" data-aos-delay="0">
+					<div class="tile-box tile-box-shadow classic-flip" data-aos-duration="400" data-aos="fade-down"
+						data-aos-delay="0">
 						<div class="tile-front front">
-							<img class="tile-icon" src="i/svg/analytics.svg" alt="tile1-icon" />
+							<img class="tile-icon" src="i/svg/chart.svg" alt="tile1-icon" />
 							<span class="tile-icon-title tile-title-primary">Analytics</span>
 							<div class="tile-image tile-image-primary"></div>
 						</div>
@@ -233,7 +232,8 @@
 						</div>
 					</div>
 
-					<div class="tile-box tile-box-shadow" data-aos-duration="400" data-aos="fade-down" data-aos-delay="200">
+					<div class="tile-box tile-box-shadow classic-flip classic-flip" data-aos-duration="400"
+						data-aos="fade-down" data-aos-delay="200">
 						<div class="tile-front front">
 							<img class="tile-icon" src="i/svg/dumbbell.svg" alt="tile3-icon" />
 							<span class="tile-icon-title tile-title-primary">Dumbbell</span>
@@ -251,7 +251,8 @@
 						</div>
 					</div>
 
-					<div class="tile-box tile-box-shadow" data-aos-duration="400" data-aos="fade-down" data-aos-delay="300">
+					<div class="tile-box tile-box-shadow classic-flip" data-aos-duration="400" data-aos="fade-down"
+						data-aos-delay="300">
 						<div class="tile-front front">
 							<img class="tile-icon" src="i/svg/running.svg" alt="tile4-icon" />
 							<span class="tile-icon-title tile-title-primary">Running</span>
@@ -272,7 +273,8 @@
 			</div>
 			<div class="row tile-gallery-row text-center color-white">
 				<div class="tile-gallery mb-30">
-					<div class="tile-box tile-box-shadow" data-aos-duration="400" data-aos="fade-down" data-aos-delay="100">
+					<div class="tile-box tile-box-shadow classic-flip" data-aos-duration="400" data-aos="fade-down"
+						data-aos-delay="100">
 						<div class="tile-front front">
 							<img class="tile-icon" src="i/svg/envelope.svg" alt="tile2-icon" />
 							<span class="tile-icon-title tile-title-primary">Latest news</span>
@@ -289,8 +291,8 @@
 						</div>
 					</div>
 
-					<div id="chat-tile"  class="tile-box tile-box-shadow" data-aos-duration="400" data-aos="fade-down"
-						data-aos-delay="400">
+					<div id="chat-tile" class="tile-box tile-box-shadow classic-flip" data-aos-duration="400"
+						data-aos="fade-down" data-aos-delay="400">
 						<div class="tile-front front">
 							<img class="tile-icon" src="i/svg/chat_round.svg" alt="tile5-icon" />
 							<span class="tile-icon-title tile-title-primary">Chat</span>
@@ -308,21 +310,17 @@
 						</div>
 					</div>
 
-					<div class="tile-box tile-box-shadow" data-aos-duration="400" data-aos="fade-down" data-aos-delay="500">
+					<div id = "location-tile" class="tile-box tile-box-shadow" data-aos-duration="400"
+						data-aos="fade-down" data-aos-delay="500">
 						<div class="tile-front front">
+							<img id = 'map-tile-set' class="map-icon-flipper" src="i/svg/toggle_off.svg" alt="tile6-icon">
 							<img class="tile-icon" id="location-icon" src="i/svg/location.svg" alt="tile6-icon" />
 							<span class="tile-icon-title tile-title-primary">Location</span>
 							<div class="tile-image tile-image-primary"></div>
 						</div>
 						<div class="tile-back back">
-							<p class="tile-info tile-info-primary">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-								neque diam, varius eu nulla non, pulvinar vulputate justo.
-								Mauris tempor erat ac urna hendrerit, sit amet imperdiet eros
-								rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et
-								ultrices posuere.
-							</p>
-							<div class="tile-image tile-image-primary"></div>
+							<img  id = 'map-tile-reset' class="map-icon-flipper" src="i/svg/toggle_on.svg" alt="tile6-icon">
+							<div id="mapid"></div>
 						</div>
 					</div>
 				</div>
@@ -433,15 +431,16 @@
 
 		<!-- Bootstrap 4.3.1 JS -->
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-		<!-- Google maps JS API -->
-		<script type="text/javascript"
-			src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
 		<!-- AOS 2.3.1 jQuery plugin JS (Animations) -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<!-- JQuery Flip plugin -->
 		<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 		<!-- Startup 3 JS (Custom js for all blocks) -->
 		<script src="js/script.js"></script>
+		<!-- LeafletJS script -->
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""></script>
 	</body>
 
 </html>
