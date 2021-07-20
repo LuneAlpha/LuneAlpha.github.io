@@ -1,17 +1,21 @@
 let isContactOpen = false;
+let isMapOpen = false;
 ////////////////////////////////////// dodaj funkciju da ispise ... ako je naslov vijesti predugacak!
 
 // Box shadow animation for card flipping
 const boxShadowController = (x) => {
 
+	let element = undefined;
+
+	// if the map reset button gets pressed
+	if(x.currentTarget.getAttribute('id') === 'map-tile-reset')
+		element = $('.location-shadow')[0]
+
 	// the element's current target is going to be HTMLDocument
 	// if it gets clicked through JQuery apparently
-	let element =
-		typeof x.currentTarget !== HTMLDocument ? x.currentTarget : x.target;
+	if(!element)
+		element = (typeof x.currentTarget !== HTMLDocument)? x.currentTarget : x.target;
 
-	// if the "parent" of the pressed item is the location tile => delegate target
-	// but the item itself isn't the flip button
-	if(x.delegateTarget.id === 'location-tile' && x.target.id !== 'map-tile-set' && x.target.id !== 'map-tile-reset') return;
 
 	// calculate the spread and blur
 	let spread = $(window).width() < 992 ? 1 : 2;
@@ -61,6 +65,42 @@ const boxShadowController = (x) => {
 	}, 500);
 };
 
+// Map tile flipping functions
+const showMap = () => {
+
+	// if the map is not yet opened
+	if(!isMapOpen){
+
+		// flip the tile
+		$('#location-tile').flip(true);
+
+		// prevent the click handler being called from hideMap()
+		$("#location-tile").unbind('click');
+
+		// toggle the bool
+		isMapOpen = true;
+	}
+}
+
+const hideMap = () => {
+
+	// if the map is opened
+	if(isMapOpen){
+
+		// flip the tile
+		$('#location-tile').flip(false);
+
+		// toggle the bool
+		isMapOpen = false;
+
+		// abuse the event loop to first flip the card
+		// and THEN re-enable the onclick handler
+		setTimeout(() => {
+			$("#location-tile").click(showMap);
+		}, 0);
+	}
+}
+
 $(document).ready(function () {
 
 	// initialise the Flip plugin
@@ -71,16 +111,14 @@ $(document).ready(function () {
 		trigger: 'manual'
 	});
 
-	$('#map-tile-set').click(() => {
-		$('#location-tile').flip(true);
-	});
-
-	$('#map-tile-reset').click(() => {
-		$('#location-tile').flip(false);
-	});
+	// location tile flip animations
+	$("#location-tile").click(showMap);
+	$('#map-tile-reset').click(hideMap);
 
 	// assign the box shadow animation on every click
 	$('.tile-box').click(boxShadowController);
+
+	$('#map-tile-reset').click(boxShadowController);
 
 	// toggle contacts for the auto-scroll-to-contact animation
 	$('#chat-tile').click(() => {
