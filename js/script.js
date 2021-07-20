@@ -77,6 +77,9 @@ const showMap = () => {
 		// prevent the click handler being called from hideMap()
 		$("#location-tile").unbind('click');
 
+		// bring back the shadow controller you just removed
+		$('.tile-box').click(boxShadowController);
+
 		// toggle the bool
 		isMapOpen = true;
 	}

@@ -14429,10 +14429,6 @@ strong {
 	cursor: pointer;
 }
 
-#location-tile:hover{
-	cursor: default;
-}
-
 .tile-icon-title {
 	position: absolute;
 	font-size: 1.65em;
