@@ -14564,9 +14564,7 @@ strong {
 
 .about-wrapper{
 	display: flex;
-	display: -webkit-box;
-    display: -webkit-flex;
-	flex-flow: column;
+	flex-flow: column wrap;
 }
 
 .about-heading{
@@ -14581,8 +14579,9 @@ strong {
 	text-align: right;
 }
 .about-wrapper:nth-child(even) > .about-info-wrapper{
-	-webkit-justify-content: end;
-	justify-content: end;
+	/* justify-content: end; */
+	position:relative;
+	right: -10%;
 }
 
 .about-wrapper:nth-child(even) > .about-info{
