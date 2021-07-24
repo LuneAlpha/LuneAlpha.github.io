@@ -106,10 +106,6 @@ const hideMap = () => {
 
 $(document).ready(function () {
 
-	// remove the padding on About Us - mobile
-	if(window.location.href.includes('about') && $(window).width() < 768)
-		$('.oddball').removeClass('pr-25')
-
 	// initialise the Flip plugin
 	$('.classic-flip').flip();
 
