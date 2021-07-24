@@ -14666,6 +14666,8 @@ strong {
 
 	.about-info{
 		width: 90%;
+		position:relative;
+		right: 0;
 	}
 }
 
@@ -14730,6 +14732,8 @@ strong {
 
 	.about-info{
 		width:90%;
+		position:relative;
+		right: 0;
 	}
 
 }
