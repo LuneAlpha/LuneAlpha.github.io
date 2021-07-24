@@ -10286,7 +10286,7 @@ strong {
 		margin-top: 20px;
 	}
 }
-.header_16 {
+.header_16, .about-nav-image {
 	background: #232c33 no-repeat 50% 100%;
 	background-size: cover;
 	overflow: hidden;
@@ -14292,13 +14292,45 @@ strong {
 	}
 }
 
-.header_16 {
+.about-nav-image{
+	background-position:50% 85%;
+}
+
+.header_16, .about-nav-image {
 	background-image: url(../i/smile-corporate-skyscraper-teeth-bare.jpg);
 	background-blend-mode: soft-light;
 }
 
+
+.nav-link-wrapper > a{
+	transition: 0.3s;
+	position:relative;
+}
+
+.nav-link-wrapper > a:after{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 3px;
+	top: 100%;
+	left: 0;
+	background: #0880c4;
+	transition: transform 0.3s;
+	transform: scaleX(0);
+	transform-origin: right;
+}
+
+.nav-link-wrapper > a:hover::after{
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
 .interested{
 	z-index: 20;
+}
+
+.color-heading-blue{
+	color: #508fe0
 }
 
 .photo-face-wrapper {
@@ -14429,6 +14461,7 @@ strong {
 	cursor: pointer;
 }
 
+
 .tile-icon-title {
 	position: absolute;
 	font-size: 1.65em;
@@ -14521,9 +14554,59 @@ strong {
 	background-color: #0aa0f520;
 }
 
+.logo-nav-dark{
+	background-color: #0f2e55
+}
+
 #contact-btn {
 	z-index: 20;
 }
+
+.about-wrapper{
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.about-heading{
+	flex:1
+}
+
+.about-wrapper:nth-child(odd) > .about-heading{
+	border-left: 10px solid #232c33;
+}
+.about-wrapper:nth-child(even) > .about-heading{
+	border-right: 10px solid #f4f7f5;
+	text-align: right;
+}
+.about-wrapper:nth-child(even) > .about-info-wrapper{
+	justify-content: end;
+}
+
+.about-wrapper:nth-child(even) > .about-info{
+	text-align: right;
+}
+
+.about-info-wrapper{
+	flex: 1;
+	width: 100%;
+	display: flex;
+}
+
+.about-info{
+	width: 60%;
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+.about-wrapper:nth-child(even) .about-info{
+	text-align: right;
+}
+
+/* .about-splitter {
+	width: 100%;
+	height: 1px;
+	background-image: linear-gradient(to right, #508fe0, #f4f7f5, #508fe0);
+} */
 
 @media screen and (max-width: 598px) {
 	.content_6 {
@@ -14570,6 +14653,20 @@ strong {
 		box-shadow: 0 0 5px 1px rgba(30, 92, 172,1);
 	}
 
+	.about-wrapper:nth-child(odd) > .about-heading{
+		border-left: 7px solid #232c33;
+	}
+	.about-wrapper:nth-child(even) > .about-heading{
+		border-right: 7px solid #f4f7f5;
+	}
+
+	.about-heading{
+		font-size: 1.8em;
+	}
+
+	.about-info{
+		width: 90%;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -14618,6 +14715,21 @@ strong {
 	#location-icon{
 		width: 105px;
 		height: 105px;
+	}
+
+	.about-wrapper:nth-child(odd) > .about-heading{
+		border-left: 8px solid #232c33;
+	}
+	.about-wrapper:nth-child(even) > .about-heading{
+		border-right: 8px solid #f4f7f5;
+	}
+
+	.about-heading{
+		font-size: 1.9em;
+	}
+
+	.about-info{
+		width:85%;
 	}
 
 }
@@ -14683,6 +14795,21 @@ strong {
 		height: 90px;
 	}
 
+	.about-wrapper:nth-child(odd) > .about-heading{
+		border-left: 8px solid #232c33;
+	}
+	.about-wrapper:nth-child(even) > .about-heading{
+		border-right: 8px solid #f4f7f5;
+	}
+
+	.about-heading{
+		font-size: 2em;
+	}
+
+	.about-info{
+		width:90%;
+	}
+
 }
 
 @media screen and (min-width: 992px) {
@@ -14722,6 +14849,17 @@ strong {
 
 	.tile-box-shadow{
 		box-shadow: 0 0 10px 2px rgba(30, 92, 172,1);
+	}
+
+	.about-wrapper:nth-child(odd) > .about-heading{
+		border-left: 8px solid #232c33;
+	}
+	.about-wrapper:nth-child(even) > .about-heading{
+		border-right: 8px solid #f4f7f5;
+	}
+
+	.about-heading{
+		font-size: 2.05em;
 	}
 }
 
@@ -14764,6 +14902,17 @@ strong {
 	#location-icon{
 		width: 105px;
 		height: 105px;
+	}
+
+	.about-wrapper:nth-child(odd) > .about-heading{
+		border-left: 8px solid #232c33;
+	}
+	.about-wrapper:nth-child(even) > .about-heading{
+		border-right: 8px solid #f4f7f5;
+	}
+
+	.about-heading{
+		font-size: 2.05em;
 	}
 }
 
