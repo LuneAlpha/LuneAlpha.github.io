@@ -14566,7 +14566,7 @@ strong {
 	display: flex;
 	display: -webkit-box;
     display: -webkit-flex;
-	flex-flow: column wrap;
+	flex-flow: column;
 }
 
 .about-heading{
