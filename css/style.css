@@ -14666,6 +14666,7 @@ strong {
 
 	.about-info{
 		width: 80%;
+		padding:0;
 	}
 }
 
@@ -14730,6 +14731,7 @@ strong {
 
 	.about-info{
 		width:80%;
+		padding:0;
 	}
 
 }
